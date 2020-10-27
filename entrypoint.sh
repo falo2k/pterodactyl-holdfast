@@ -22,6 +22,14 @@ else
 fi
 popd
 
+# Update the steam update wrapper and python requirements
+# Could switch this with an AUTO_UPDATE flag
+echo Updating steam update wrapper
+pushd steam-update-wrapper
+git pull
+pip3 install -U --target=/home/container -r requirements.txt
+popd
+
 # Replace Startup Variables
 MODIFIED_STARTUP=$(echo $(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
 START_COMMAND=$(echo -e ${MODIFIED_STARTUP})
