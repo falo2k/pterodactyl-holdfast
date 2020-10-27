@@ -26,8 +26,8 @@ popd
 # Could switch this with an AUTO_UPDATE flag
 echo Updating steam update wrapper
 pushd steam-update-wrapper
-git pull
-pip3 install -U --user -r requirements.txt
+git -c core.fileMode=false diff pull
+pip3 install --quiet -U --target /home/container -r requirements.txt
 popd
 
 # Replace Startup Variables
