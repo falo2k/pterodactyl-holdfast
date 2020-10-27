@@ -1,6 +1,0 @@
-gevent
-steam
-steam[client]
-google-api-python-client
-eventemitter
-regex
