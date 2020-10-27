@@ -27,7 +27,7 @@ popd
 echo Updating steam update wrapper
 pushd steam-update-wrapper
 git pull
-pip3 install -U --target=/home/container -r requirements.txt
+pip3 install -U --user -r requirements.txt
 popd
 
 # Replace Startup Variables
