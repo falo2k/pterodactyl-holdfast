@@ -26,7 +26,8 @@ popd
 # Could switch this with an AUTO_UPDATE flag
 echo Updating steam update wrapper
 pushd steam-update-wrapper
-git -c core.fileMode=false diff pull
+git -c core.fileMode=false pull
+echo Installing requirements.txt using pip
 pip3 install --quiet -U --target /home/container -r requirements.txt
 popd
 
