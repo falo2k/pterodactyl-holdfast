@@ -29,5 +29,11 @@ ENV  USER=container HOME=/home/container
 
 WORKDIR /home/container
 
+RUN mkdir /home/container/holdfastnaw-dedicated
+
+COPY ./config.json /home/container/holdfastnaw-dedicated/
+COPY ./requirements.txt /home/container/holdfastnaw-dedicated/
+COPY ./steam-update-wrapper.py /home/container/holdfastnaw-dedicated
+
 COPY  ./entrypoint.sh /entrypoint.sh
 CMD   ["/bin/bash", "/entrypoint.sh"]

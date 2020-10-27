@@ -1,0 +1,7 @@
+{
+	"checkinterval" : 5,
+	"appid" : 1424230,
+	"installdir" : "/home/container/holdfastnaw-dedicated",
+	"steamcmd" : "/home/container/steamcmd/steamcmd.sh",
+	"steamcmdextras" : ""
+}
